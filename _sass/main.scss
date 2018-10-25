@@ -1,0 +1,110 @@
+$backgroundColor: #fefefe;
+$bodyColor: #454545;
+$bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+body {
+  background: $backgroundColor;
+  color: $bodyColor;
+  font-family: $bodyFont;
+  margin:0;
+}
+
+.HolyGrail {
+  display: flex;
+  flex-direction: column;
+  /* Set the height to 100% to avoid the IE 10-11 `min-height` bug.
+   * Use `%` instead of `vh` because `vh` is buggy in older mobile Safari.
+   */
+  height: 100%;
+}
+.HolyGrail-header {
+		background: #333333;
+		#box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.075);
+		color: #efefef;
+		cursor: default;
+		padding: 1em 1.5em;
+  flex: none;
+}
+
+.HolyGrail-leader {
+  display: flex;
+  /* Set `flex-shrink` to `0` to prevent some browsers from
+   * letting items shrink to smaller than their content's default
+   * minimum size. See http://bit.ly/1Mn35US for details.
+   */
+  flex: 1 0 auto;
+  flex-direction: column;
+}
+
+.HolyGrail-footer {
+  flex: none;
+}
+
+
+.HolyGrail-leader-first {
+  order: -1;
+}
+
+.HolyGrail-leader-main {
+  order: 0; /* this is the default */
+}
+
+.HolyGrail-leader-last {
+  order: 0; /* this is the default */
+}
+
+/* Small screen */
+@media (max-width: 767px) {
+
+  .HolyGrail-leader {
+    flex-direction: column;
+  }
+
+  .HolyGrail-leader-first {
+      /* No flex */
+  }
+
+  .HolyGrail-leader-main {
+      /* No flex */
+  }
+
+  .HolyGrail-leader-last {
+      /* No flex */
+  }
+
+}
+
+/* Large screen */
+@media (min-width: 768px) {
+
+  .HolyGrail-leader {
+    flex-direction: row;
+  }
+
+  .HolyGrail-leader-first {
+     flex: 0 0 12em; /* Optional: change 12 to any column width */
+  }
+
+  .HolyGrail-leader-main {
+    flex: 1;
+  }
+
+  .HolyGrail-leader-last {
+    flex: 0 0 12em; /* Optional: change 12 to any column width */
+  }
+
+}
+
+ul.icons {
+  cursor: default;
+}
+
+ul.icons li {
+  display: inline-block;
+  line-height: 1em;
+  padding-left: 0.5em;
+}
+
+ul.icons li:first-child {
+  padding-left: 0;
+}
