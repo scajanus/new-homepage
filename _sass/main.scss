@@ -55,7 +55,7 @@ body {
 }
 
 /* Small screen */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1000px) {
 
   .HolyGrail-leader {
     flex-direction: column;
@@ -76,7 +76,7 @@ body {
 }
 
 /* Large screen */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1001px) {
 
   .HolyGrail-leader {
     flex-direction: row;
