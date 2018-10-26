@@ -18,6 +18,7 @@ body {
   height: 100%;
 }
 .HolyGrail-header {
+	  font-family: "ITC Grouch";
 		background: #333333;
 		#box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.075);
 		color: #efefef;
@@ -54,7 +55,7 @@ body {
 }
 
 /* Small screen */
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
 
   .HolyGrail-leader {
     flex-direction: column;
@@ -75,7 +76,7 @@ body {
 }
 
 /* Large screen */
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
 
   .HolyGrail-leader {
     flex-direction: row;
